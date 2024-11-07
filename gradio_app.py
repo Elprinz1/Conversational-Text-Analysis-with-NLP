@@ -24,7 +24,7 @@ def get_themes(theme_list_str, subtitles_path, save_path):
         title='Series Themes',
         tooltip=['Theme', 'Score'],
         vertical=False,
-        sort=['x', 'y'],
+        width=500,
         height=250
     )
 
@@ -38,8 +38,8 @@ def main():
                 gr.HTML("<h1>Theme Classification (Zero Shot Classifier)</h1>")
                 with gr.Row():  # inner row for 2 columns to work
                     with gr.Column():
-                        df = pd.DataFrame()
-                        plot = gr.BarPlot(df )
+                        # df = pd.DataFrame()
+                        plot = gr.BarPlot()
                     with gr.Column():
                         theme_list = gr.Textbox(label="Themes")
                         subtitles_path = gr.Textbox(
