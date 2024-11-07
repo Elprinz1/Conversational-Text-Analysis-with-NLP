@@ -44,7 +44,7 @@ class ThemeClassifier():
 
         # Get the theme inference from the model
         theme_output = self.theme_classifier(
-            batches[:2],
+            batches,
             self.theme_list,
             multi_label=True
         )
@@ -72,7 +72,7 @@ class ThemeClassifier():
         # load dataset
         df = load_subtitles_dataset(dataset_path=dataset_path)
 
-        df = df.head(2)
+        # df = df.head(2)
 
         # Run inference
         output_theme = df['script'].apply(self.get_theme_inference)
