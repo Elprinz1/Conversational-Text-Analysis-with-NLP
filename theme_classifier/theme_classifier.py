@@ -1,4 +1,3 @@
-from utils import load_subtitles_dataset
 import nltk
 import torch
 from transformers import pipeline
@@ -10,6 +9,7 @@ import sys
 import pathlib
 folder_path = pathlib.Path(__file__).parent.resolve()
 sys.path.append(os.path.join(folder_path, '../'))
+from utils import load_subtitles_dataset
 # Add the parent directory to the system path for module imports
 # sys.path.insert(0, str(folder_path.parent))
 nltk.download('punkt')
